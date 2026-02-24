@@ -1,6 +1,6 @@
 package tictactoe;
 
-import javax.swing.Jframe;
+import javax.swing.SwingUtilities;
 
 public final class App {
     /**
@@ -13,6 +13,8 @@ public final class App {
      * Entry point for the app.
      */
     public static void main (final String[] args) {
-        System.out.println("Hello world");
+        SwingUtilities.invokeLater(() -> {
+
+        });
     }
 }
