@@ -9,7 +9,9 @@ public final class App {
     private App() {
 
     }
-
+    /**
+     * Entry point for the app.
+     */
     public static void main (final String[] args) {
         System.out.println("Hello world");
     }
