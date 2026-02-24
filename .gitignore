@@ -1,4 +1,19 @@
-
+.gitignore     See http://gitignore.io
+ # content
+ .idea
+ .vscode
+ .vscode-test
+ .DS_Store
+ __MAC
+ *.bak
+ *.log
+ *.save
+ *.swp
+ *.tmp
+ vim.*
+ *.~
+ *[#~]
+ .*[#~]
 
 # Ignore Gradle project-specific cache directory
 .gradle
