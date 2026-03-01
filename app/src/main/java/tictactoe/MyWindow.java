@@ -14,6 +14,11 @@ public final class MyWindow extends JFrame{
 
         setLayout(new GridLayout(3, 3)); 
 
+        for (int i = 0; i < 9; i++) {
+            JButton button = new JButton(""); 
+            add(button);
+        }
+
         setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
