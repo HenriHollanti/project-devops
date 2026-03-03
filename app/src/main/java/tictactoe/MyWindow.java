@@ -20,7 +20,7 @@ public final class MyWindow extends JFrame {
 
         for (int i = 0; i < 9; i++) {
             JButton button = new JButton("");
-            button.setFont(new Font("Arial", Font.BOLD, 60));
+            button.setFont(new Font("Arial", Font.BOLD, 55));
             button.setBackground(Color.DARK_GRAY);
             button.setForeground(Color.WHITE);
 
