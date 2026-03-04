@@ -8,7 +8,7 @@ public final class GameLogic implements Logic{
     private JLabel statusLabel;
     private JButton[] buttons;
 
-    
+    private GameLogic() { }
 
     public GameLogic(JLabel statusLabel, JButton[] buttons) {
         this.statusLabel = statusLabel;
