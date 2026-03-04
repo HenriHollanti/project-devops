@@ -6,6 +6,10 @@ public final class GameLogic implements Logic{
 
     private JLabel statusLabel;
 
+    public GameLogic(JLabel statusLabel) {
+        this.statusLabel = statusLabel;
+    }
+
     public void checkWinner() {
         int[][] winConditions = {
             {0, 1, 2}, {3, 4, 5}, {6, 7, 8}, // Rows
