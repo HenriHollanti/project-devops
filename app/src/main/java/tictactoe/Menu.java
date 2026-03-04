@@ -7,12 +7,17 @@ import java.awt.Font;
 import java.awt.Color;
 
 public class Menu extends JPanel {
-    public Menu() {
+    private JFrame window;
+
+    public Menu(JFrame window) {
+        this.window = window;
         initialize();
     }
 
+    private int playerCount = 0;
+
     private void initialize() {
-        setLayout(new BoxLayout(BoxLayout.Y_AXIS, 10, 5)); // BoxLayout should make the items inside from top to bottom
+        setLayout(new BoxLayout(this, BoxLayout.Y_AXIS)); // BoxLayout should make the items inside from top to bottom
         JLabel titleLabel = new JLabel("Tic-Tac-Toe");
         titleLabel.setAlignmentX(Component.CENTER_ALIGNMENT); // Centres the object
 
@@ -22,15 +27,25 @@ public class Menu extends JPanel {
         startButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
                 JDialog dialog = new JDialog(window, "Choose your players", true);
 
                 JPanel dialogPanel = new JPanel();
                 dialogPanel.setLayout(new BoxLayout(dialogPanel, BoxLayout.Y_AXIS));
 
                 JLabel dialogLabel =  new JLabel("Choose how many players");
+
+
                 JButton onePlayer = new JButton("1 Player");
+                onePlayer.addActionListener(e -> {
+                    playerCount = 1;
+                    dialog.dispose();
+                });
+
                 JButton twoPlayer = new JButton("2 Players");
+                 twoPlayer.addActionListener(e -> {
+                    playerCount = 2;
+                    dialog.dispose();
+                });
 
 
                 dialogLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
