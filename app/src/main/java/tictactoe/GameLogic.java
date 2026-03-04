@@ -8,8 +8,11 @@ public final class GameLogic implements Logic{
     private JLabel statusLabel;
     private JButton[] buttons;
 
+    
+
     public GameLogic(JLabel statusLabel, JButton[] buttons) {
         this.statusLabel = statusLabel;
+        this.buttons = buttons;
     }
 
     public void checkWinner() {
