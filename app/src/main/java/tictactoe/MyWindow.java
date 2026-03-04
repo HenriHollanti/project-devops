@@ -43,6 +43,7 @@ public final class MyWindow extends JFrame {
 
             gridPanel.add(buttons[i]);
         }
+        add(gridPanel, BorderLayout.CENTER);
         setSize(400, 450);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
