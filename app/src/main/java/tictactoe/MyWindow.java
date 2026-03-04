@@ -60,6 +60,6 @@ public final class MyWindow extends JFrame {
 
     private void resetBoard() {
         for (JButton b : buttons) b.setText("");
-        isXTurn = false;
+        isXTurn = true;
     }
 }
