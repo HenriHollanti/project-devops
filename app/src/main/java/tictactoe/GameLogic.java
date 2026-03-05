@@ -6,6 +6,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+/**
+ * Implements the Logic interface for Tic-Tac-Toe.
+ * Handles checking winners, resetting the board,
+ * and calculating AI moves.
+ */
 public final class GameLogic implements Logic {
 
     private MyWindow parentWindow;
@@ -53,7 +58,7 @@ public final class GameLogic implements Logic {
                 return true;
             }
         }
-        
+
         return false;
     }
     /**
@@ -65,6 +70,10 @@ public final class GameLogic implements Logic {
         statusLabel.setText("Player X's Turn");
     }
 
+/**
+ * Returns a list of indexes of buttons that are currently empty.
+ * These are the available moves for the next player or AI.
+ */
     public List<Integer> getAvailableMoves() {
     List<Integer> available = new ArrayList<>();
     for (int i = 0; i < buttons.length; i++) {
@@ -74,7 +83,11 @@ public final class GameLogic implements Logic {
     }
     return available;
 }
-
+/**
+ * Selects a random available move for the AI
+ * by checking empty buttons and picking one at random.
+ * @return The index of the chosen button (0-8), or -1 if no moves are available.
+ */
 public int getRandomMove() {
     List<Integer> available = getAvailableMoves();
     if (available.isEmpty()) return -1;
@@ -95,7 +108,7 @@ private boolean wouldWin(int index, String mark) {
 }
 
     /**
-     * Selects a move by prioritizing winning, then blocking, 
+     * Selects a move by prioritizing winning, then blocking,
      * then falling back to random choice.
      */
     public int getSmartMove() {
