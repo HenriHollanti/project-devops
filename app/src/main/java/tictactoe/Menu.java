@@ -21,14 +21,8 @@ public class Menu extends JPanel {
         titleLabel.setFont(new Font("Arial", Font.BOLD, 30));
         titleLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
 
-    /**
-     * This method creates the title, start button and quit buttons for the menu panel.
-     *
-     */
-    private void initialize() {
-        setLayout(new BoxLayout(this, BoxLayout.Y_AXIS)); // BoxLayout should make the items inside from top to bottom when its Y.AXIS
-        JLabel titleLabel = new JLabel("Tic-Tac-Toe"); // Label object
-        titleLabel.setAlignmentX(Component.CENTER_ALIGNMENT); // Centres the object
+        JButton startButton = new JButton("Start");
+        startButton.setAlignmentX(Component.CENTER_ALIGNMENT);
 
         JButton startButton = new JButton("Start"); // Button object
         startButton.setAlignmentX(Component.CENTER_ALIGNMENT); // Centres the object
