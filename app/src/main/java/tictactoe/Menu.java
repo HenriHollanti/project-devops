@@ -9,24 +9,13 @@ public class Menu extends JPanel {
     private JFrame window;
     private int playerCount = 0;
 
-    /**
-     *Creates menu panel that contains:
-     <ul>
-     *  <li>Title label</li>
-     *  <li>Start button</li>
-     *  <li>Quit button</li>
-     *</ul>
-     *
-     * @param window the parent JFrame used as a container
-     * @param TBD the game panel that starts when user presses start and chooses the players
-     */
-    public Menu(JFrame window) { // this needs the game panel as an argument
+    public Menu(JFrame window) {
         this.window = window;
-        // Need the file that has the game logic here "this.<file> = <file>;""
         initialize();
     }
 
-    private int playerCount = 0; // Playercount is used in start buttons Actionlistener method to decide how many players will play the game
+    private void initialize() {
+        setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 
 
     /**
