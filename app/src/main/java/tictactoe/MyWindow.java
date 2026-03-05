@@ -19,7 +19,9 @@ public final class MyWindow extends JFrame {
         setLocationRelativeTo(null);
     }
 
-        setLayout(new BorderLayout());
+    public void initializeGame(int playerCount) {
+        this.getContentPane().removeAll();
+        this.setLayout(new BorderLayout());
         statusLabel = new JLabel("Player X's Turn", JLabel.CENTER);
         JPanel gridPanel = new JPanel(new GridLayout(3, 3));
         logic = new GameLogic(this, statusLabel, buttons);
@@ -30,26 +32,20 @@ public final class MyWindow extends JFrame {
             buttons[i].setBackground(Color.DARK_GRAY);
             buttons[i].setForeground(Color.WHITE);
 
-
-            final int index =i;
+            final int index = i;
             buttons[i].addActionListener(e -> {
                 if (buttons[index].getText().equals("")) {
                     buttons[index].setText(isXTurn ? "X" : "O");
                     logic.checkWinner();
                     isXTurn = !isXTurn;
-
                     statusLabel.setText(isXTurn ? "Player X's Turn" : "Player O's Turn");
-
                 }
             });
-
             gridPanel.add(buttons[i]);
         }
         add(gridPanel, BorderLayout.CENTER);
         add(statusLabel, BorderLayout.NORTH);
-        setSize(400, 450);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setLocationRelativeTo(null);
+        this.revalidate();
+        this.repaint();
     }
-
 }
