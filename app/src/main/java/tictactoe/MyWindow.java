@@ -124,7 +124,8 @@ public final class MyWindow extends JFrame {
             this.revalidate();
             this.repaint();
         });
-
+    // Adds a panel at the bottom of the window containing
+    // the "Back to Menu" button and refreshes the layout.
         bottomPanel.add(menuButton);
         this.add(bottomPanel, BorderLayout.SOUTH);
         this.revalidate();
