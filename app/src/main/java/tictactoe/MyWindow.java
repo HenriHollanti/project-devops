@@ -10,6 +10,10 @@ public final class MyWindow extends JFrame {
      * the player X's turn.
      */
     private boolean isXTurn = true;
+    /**
+     * The array of JButtons that form the tictactoe
+     * grid.
+     */
     private JButton[] buttons = new JButton[9];
     private JLabel statusLabel;
     private Logic logic;
