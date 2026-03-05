@@ -2,6 +2,7 @@ package tictactoe;
 
 import javax.swing.*;
 import java.awt.*;
+import javax.swing.SwingUtilities;
 
 public final class MyWindow extends JFrame {
 
@@ -92,6 +93,7 @@ public final class MyWindow extends JFrame {
 
                         if (isAiEnabled && !isXTurn) {
                             SwingUtilities.invokeLater(() -> performAiMove());
+                        }
                     }
                 }
             });
