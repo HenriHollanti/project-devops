@@ -127,7 +127,4 @@ private boolean wouldWin(int index, String mark) {
         // fallback to random
         return getRandomMove();
     }
-
-
-
 }
