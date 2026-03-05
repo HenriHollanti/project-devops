@@ -58,8 +58,26 @@ public final class MyWindow extends JFrame {
             });
             gridPanel.add(buttons[i]);
         }
+        
         add(gridPanel, BorderLayout.CENTER);
         add(statusLabel, BorderLayout.NORTH);
+        this.revalidate();
+        this.repaint();
+    }
+
+    private void showEndGameOptions() {
+        JPanel bottomPanel = new JPanel();
+        JButton menuButton = new JButton("Back to Menu");
+        
+        menuButton.addActionListener(e -> {
+            this.getContentPane().removeAll();
+            this.add(new Menu(this)); 
+            this.revalidate();
+            this.repaint();
+        });
+
+        bottomPanel.add(menuButton);
+        this.add(bottomPanel, BorderLayout.SOUTH);
         this.revalidate();
         this.repaint();
     }
