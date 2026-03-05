@@ -66,12 +66,15 @@ public class Menu extends JPanel {
             }
         });
 
-        JButton quitButton = new JButton("Quit"); // Button for quitting the game
-        quitButton.setAlignmentX(Component.CENTER_ALIGNMENT); // Centres the object
+        JButton quitButton = new JButton("Quit");
+        quitButton.setAlignmentX(Component.CENTER_ALIGNMENT);
         quitButton.addActionListener(e -> System.exit(0));
 
+        add(Box.createVerticalGlue());
         add(titleLabel);
+        add(Box.createRigidArea(new Dimension(0, 20)));
         add(startButton);
+        add(Box.createRigidArea(new Dimension(0, 10)));
         add(quitButton);
     }
 }
