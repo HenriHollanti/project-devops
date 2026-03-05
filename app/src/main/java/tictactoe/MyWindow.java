@@ -22,6 +22,8 @@ public final class MyWindow extends JFrame {
     private JLabel statusLabel;
     /**
      * The instance of class implementing Logic.
+     * Used for checking the winner of the game
+     * and resetting the board.
      */
     private Logic logic;
     private int moveCount = 0;
