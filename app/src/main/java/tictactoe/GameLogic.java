@@ -28,6 +28,11 @@ public final class GameLogic implements Logic {
         this.buttons = buttons;
     }
 
+    /**
+     * A method for checking the winner of the game
+     * by comparing the pressed buttons' positions
+     * against predefined winning positions.
+     */
     @Override
     public boolean checkWinner() {
         int[][] winConditions = {
